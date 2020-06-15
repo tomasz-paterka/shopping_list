@@ -6,16 +6,11 @@ const autoprefixer = require('autoprefixer');
 const webpack = require('webpack');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js'
-  },
-  devServer: {
-    contentBase: path.join(__dirname, './src'),
-    open: true,
-    hot: true
   },
   module: {
     rules: [
@@ -52,7 +47,15 @@ module.exports = {
       inject: true,
       hash: false,
       template: './src/index.html',
-      filename: 'index.html'
+      filename: 'index.html',
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true
+      }
     }),
     new JsDocPlugin({
       conf: 'jsdoc.conf.json',
