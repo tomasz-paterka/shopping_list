@@ -1,10 +1,16 @@
 import React from 'react';
-import Test from './components/Test';
+
+import Layout from './containers/Layout/Layout';
+import ShoppingList from './containers/ShoppingList/ShoppingList';
 
 class App extends React.Component {
   render() {
     return (
-      <Test />
+      <div>
+        <Layout>
+          <ShoppingList />
+        </Layout>
+      </div>
     );
   }
 }
