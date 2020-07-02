@@ -1,6 +1,7 @@
 import React from 'react';
 
 import ListItems from '../../components/ShopList/ListItems';
+import Logo from '../../components/Logo/Logo';
 
 class ShoppingList extends React.Component {
   constructor(props) {
@@ -10,12 +11,17 @@ class ShoppingList extends React.Component {
     }
   }
 
+  // addProductHandler = () => {
+  //   // add input with two fields, one for product and one for amount
+  // }
+
 
   render() {
     const list = this.state;
     console.log(list);
     return (
        <div>
+         <Logo />
          <ListItems products={this.state.products} />
        </div>
     );

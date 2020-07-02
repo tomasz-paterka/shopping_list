@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import ShopListItem from './ShopListItem/ShopListitem';
+import Button from '../UI/Button/Button';
 
 const ListItems = (props) => {
   const shopListItems = props.products.map(prod => (
@@ -9,6 +11,7 @@ const ListItems = (props) => {
   
   return (
     <div>
+      <Button>Dodaj</Button>
       <ul>
         {shopListItems}
       </ul>
