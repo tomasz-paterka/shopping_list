@@ -1,0 +1,17 @@
+.header__toolbar {
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgb(231, 229, 227);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px;
+}
+
+@media (max-width: 499px) {
+  .header__toolbar {
+    display: none;
+  }
+}

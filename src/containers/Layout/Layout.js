@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Aux from '../../hoc/Auxiliary';
+import ToolBar from '../../components/Navigation/ToolBar/ToolBar';
 
 class Layout extends React.Component {
 
@@ -9,6 +10,7 @@ class Layout extends React.Component {
     return (
       <Aux>
         <div>
+          <ToolBar />
           Toolbar, SideDrawer, Backdrop
         </div>
         <main>
