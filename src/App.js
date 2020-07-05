@@ -6,11 +6,9 @@ import ShoppingList from './containers/ShoppingList/ShoppingList';
 class App extends React.Component {
   render() {
     return (
-      <div>
-        <Layout>
-          <ShoppingList />
-        </Layout>
-      </div>
+      <Layout>
+        <ShoppingList />
+      </Layout>
     );
   }
 }

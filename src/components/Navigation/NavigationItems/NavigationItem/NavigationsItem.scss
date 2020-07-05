@@ -2,20 +2,19 @@
   margin: 10px 0;
   display: block;
   width: 100%;
+  padding: 0 10px;
+  
 }
 
 .header__nav-link a {
-  color: #8F5C2C;
   text-decoration: none;
   width: 100%;
   display: block;
+  color: white;
+  background-color: #266C78;
+  padding: 10px 25px;
+  border-radius: 0.25rem;
 }
-
-/* .header__nav-link a:hover,
-.header__nav-link a:active,
-.header__nav-link a.active {
-  color: #40A4C8;
-} */
 
 @media (min-width: 500px) {
   .header__nav-link {
@@ -26,16 +25,7 @@
     align-items: center;
   }
   
-  .header__nav-link a {
-    color: white;
-    height: 100%;
-    padding: 16px 10px;
-    border-bottom: 4px solid transparent;
-  }
-  
-  .header__nav-link a {
-    background-color: #266C78;
-    border-bottom: 4px solid #C4543D;
-    color: white;
+  .header__nav-link a:hover {
+    border-bottom: 1.5px solid #C4543D;
   }
 }

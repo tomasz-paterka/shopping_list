@@ -3,11 +3,15 @@
   width: 100%;
   position: fixed;
   top: 0;
-  background-color: rgb(231, 229, 227);
+  left: 0;
+  /* background-color: rgb(231, 229, 227); */
+  background-color: #DBE6EC;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  z-index: 90;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 
 @media (max-width: 499px) {

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Aux from '../../hoc/Auxiliary';
 import ListItems from '../../components/ShopList/ListItems';
 
 class ShoppingList extends React.Component {
@@ -19,9 +20,9 @@ class ShoppingList extends React.Component {
     const list = this.state;
     console.log(list);
     return (
-       <div>
+       <Aux>
          <ListItems products={this.state.products} />
-       </div>
+       </Aux>
     );
   }
 }
