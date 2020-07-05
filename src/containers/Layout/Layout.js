@@ -12,6 +12,7 @@ class Layout extends React.Component {
       <Aux>
         <ToolBar />
         <main className='content'>
+          <div className='content__fade'></div>
           {this.props.children}
         </main>
       </Aux>

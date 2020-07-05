@@ -9,7 +9,7 @@ const NavigationItems = () => (
     <NavigationItem link='/'>Zapisz listę</NavigationItem>
     <NavigationItem link='/'>Usuń listę</NavigationItem>
     <NavigationItem link='/'>Konto</NavigationItem>
-    <NavigationItem link='/'>Usuń listę</NavigationItem>
+    <NavigationItem link='/'>Wyloguj</NavigationItem>
   </ul>
 );
 

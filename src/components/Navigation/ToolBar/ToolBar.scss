@@ -4,8 +4,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  /* background-color: rgb(231, 229, 227); */
-  background-color: #DBE6EC;
+  background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,6 +12,10 @@
   padding: 0 20px;
   box-sizing: border-box;
 }
+
+/* .header__toolbar--background {
+  background-color: #DBE6EC;
+} */
 
 @media (max-width: 499px) {
   .header__toolbar {
