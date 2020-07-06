@@ -1,0 +1,20 @@
+.list-items__item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #266C78;
+  margin: 15px 10px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.item__name, 
+.item__amount {
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+.item__delete {
+  color: red;
+  font-weight: bold;
+}

@@ -14,7 +14,7 @@ const ListItems = (props) => {
   return (
     <Aux>
       
-      <ul className='list__items'>
+      <ul className='list-items'>
         <Button>Dodaj</Button>
         {shopListItems}
       </ul>
