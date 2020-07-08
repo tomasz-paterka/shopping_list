@@ -1,15 +1,15 @@
-.content {
+.Layout {
   /* margin-top: 100px; */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-image: url(../../assets/img/main_menu_img.jpg);
+  background-image: url(../assets/img/main_menu_img.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
-  .content__fade {
+  .Layout__fade {
     position: absolute;
     top: 0;
     left: 0;

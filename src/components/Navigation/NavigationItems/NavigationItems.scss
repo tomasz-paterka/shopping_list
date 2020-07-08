@@ -1,4 +1,4 @@
-.header__nav-links {
+.NavigationItems__links {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -9,7 +9,7 @@
 }
 
 @media (min-width: 500px) {
-  .header__nav-links {
+  .NavigationItems__links {
     flex-flow: row;
   }
 }

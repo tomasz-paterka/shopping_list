@@ -2,10 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
-import './NavigationsItem.scss';
-
 const NavigationItem = (props) => (
-  <li className='header__nav-link'>
+  <li className='NavigationItem'>
     <NavLink to={props.link}>{props.children}</NavLink>
   </li>
 );

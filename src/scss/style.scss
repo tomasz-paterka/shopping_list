@@ -1,4 +1,14 @@
+$main_color: #266C78;
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@import '../containers/Layout/Layout.scss';
+@import '../components/Navigation/Logo/Logo.scss';
+@import '../components/Navigation/NavigationItems/NavigationItem/NavigationItem.scss';
+@import '../components/Navigation/NavigationItems/NavigationItems.scss';
+@import '../components/Navigation/ToolBar/ToolBar.scss';
+@import '../components/ShopList/ShopListItem/ShopListItem.scss';
+@import '../components/UI/Button/Button.scss';
+@import '../components/ShopList/ListItems.scss';
 
 body {
   margin: 0;
@@ -6,4 +16,6 @@ body {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
+
+
 

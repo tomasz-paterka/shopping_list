@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Aux from '../../hoc/Auxiliary';
-import './ListItems.scss'
 import ShopListItem from './ShopListItem/ShopListitem';
 import Button from '../UI/Button/Button';
 
@@ -14,7 +13,7 @@ const ListItems = (props) => {
   return (
     <Aux>
       
-      <ul className='list-items'>
+      <ul className='ListItems'>
         <Button>Dodaj</Button>
         {shopListItems}
       </ul>

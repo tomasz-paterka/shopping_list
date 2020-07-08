@@ -1,4 +1,4 @@
-.header__toolbar {
+.ToolBar {
   height: 100px;
   width: 100%;
   position: fixed;
@@ -13,12 +13,12 @@
   box-sizing: border-box;
 }
 
-/* .header__toolbar--background {
+/* .ToolBar--background {
   background-color: #DBE6EC;
 } */
 
 @media (max-width: 499px) {
-  .header__toolbar {
+  .ToolBar {
     display: none;
   }
 }

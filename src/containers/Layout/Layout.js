@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './Layout.scss';
 import Aux from '../../hoc/Auxiliary';
 import ToolBar from '../../components/Navigation/ToolBar/ToolBar';
 
@@ -11,8 +10,8 @@ class Layout extends React.Component {
     return (
       <Aux>
         <ToolBar />
-        <main className='content'>
-          <div className='content__fade'></div>
+        <main className='Layout'>
+          <div className='Layout__fade'></div>
           {this.props.children}
         </main>
       </Aux>

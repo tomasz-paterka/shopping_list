@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './ShopListItem.scss';
 
 const ShopListItem = (props) => (
-  <div className='list-items__item'>
+  <div className='ShopListItem__item'>
     <p>Product: 
-      <span className='item__name'>{props.product}</span>
+      <span className='ShopListItem__name'>{props.product}</span>
     </p>
     <p>Amount: 
-      <span className='item__amount'>{props.amount}</span>
+      <span className='ShopListItem__amount'>{props.amount}</span>
     </p>
-    <span className='item__delete'>X</span>
+    <span className='ShopListItem__delete'>X</span>
   </div>
 );
 
