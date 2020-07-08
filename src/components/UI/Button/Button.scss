@@ -1,3 +1,13 @@
 .Button {
+  color: white;
   background-color: $main_color;
+  padding: 10px 25px;
+  font-family: $main_font;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  margin: 15px 10px;
+  &:hover {
+    background-color: #328492;
+  }
 }
