@@ -15,7 +15,7 @@ const ShopListItem = (props) => (
 
 ShopListItem.propTypes = {
   product: PropTypes.string,
-  amount: PropTypes.number,
+  amount: PropTypes.string,
 }
 
 export default ShopListItem;

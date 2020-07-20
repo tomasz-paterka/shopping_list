@@ -2,14 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Input = (props) => (
-  <input
-    type="text" 
-    className='Input'
-    value={props.value}/>
+  <div>
+    <label>{props.label}</label>
+    <input
+      type="text" 
+      className='Input'
+      name={props.name}
+      onChange={props.change}/>
+  </div>
+
 );
 
 Input.propTypes = {
-  value: PropTypes.string,
+  label: PropTypes.string,
+  name: PropTypes.string,
+  change: PropTypes.func
 }
 
 export default Input;
