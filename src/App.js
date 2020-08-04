@@ -9,14 +9,15 @@ import Home from './containers/testRouter/Home';
 // import About from './containers/testRouter/About';
 
 class App extends React.Component {
+
   render() {
     let routes = (
       <Switch>
-        <Route path='/home' component={Home} />
-        <Route path='/list' component={ShoppingList} />
+        {/* <Route path='/home' component={Home} /> */}
         <Route path='/editlist' component={EditList} />
+        <Route path='/list' component={ShoppingList} />
         <Route path='/addlist' component={AddList} />
-        <Route path='/' component={AddList} />
+        <Route path='/' component={Home} />
       </Switch>
     );
 

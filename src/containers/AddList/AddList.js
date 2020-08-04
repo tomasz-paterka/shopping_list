@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Aux from '../../hoc/Auxiliary';
 
-// import ShoppingList from '../ShoppingList/ShoppingList';
 import Button from '../../components/UI/Button/Button';
 import Input from '../../components/UI/Input/Input';
 
@@ -33,20 +32,6 @@ class AddList extends React.Component {
   } 
   
   render() {
-    // const addList = (
-    //   this.state.name === '' ?
-    //   <Aux>
-    //     <Input 
-    //       label="Nazwa listy zakupów" 
-    //       change={this.inputListNameHandler} 
-    //       name='inputValue' />
-    //     <Button click={this.addNameList}>Stwórz listę</Button>
-    //   </Aux> : null
-    // );
-    // const shoppingList = this.state.name !== '' ? <ShoppingList {...this.state} /> : null;
-    
-    // const list = this.state;
-    // console.log(list);
     return (
       <Aux>
         <div className='AddList'>

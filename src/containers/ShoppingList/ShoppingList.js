@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import uuid from 'react-uuid';
 
 import Aux from '../../hoc/Auxiliary';
 import ShopListItem from '../../components/ShopListItem/ShopListItem';
@@ -10,7 +11,8 @@ class ShoppingList extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      products: []
+      products: [],
+      listName: this.props.location.listName
     };
 
     this.inputProductHandler = this.inputProductHandler.bind(this);
@@ -30,21 +32,30 @@ class ShoppingList extends React.Component {
     this.setState({
       products: [
         ...this.state.products,
-        {product: product, amount: amount, id: product}]});
-  } 
+        {product: product, amount: amount, id: uuid()}]});
+  }
+  
+  removeHandler(id) {
+    let filteredProducts = this.state.products.filter(item => item.id !== id)
+    this.setState({products: filteredProducts});
+  }
   
   render() {
-    const shopListItems = this.state.products ? this.state.products.map(prod => (
-      <ShopListItem key={prod.id} product={prod.product} amount={prod.amount}/>
-    )) : null;
-
-    const list = this.state;
-    console.log(list);
+    const shopListItems = this.state.products ? 
+      this.state.products.map(prod => (
+        <ShopListItem 
+          key={prod.id} 
+          product={prod.product} 
+          amount={prod.amount} 
+          remove={() => this.removeHandler(prod.id)}/>
+      )) : null;
+    
+    console.log(this.state);
 
     return (
       <Aux>
         <ul className='ShoppingList'>
-          <p>{this.props.location.listName}</p>
+          <p>{this.state.listName}</p>
           <Input 
             label="Dodaj produkt" 
             change={this.inputProductHandler}

@@ -9,13 +9,14 @@ const ShopListItem = (props) => (
     <p>Amount: 
       <span className='ShopListItem__amount'>{props.amount}</span>
     </p>
-    <span className='ShopListItem__delete'>X</span>
+    <span onClick={props.remove} className='ShopListItem__delete'>X</span>
   </div>
 );
 
 ShopListItem.propTypes = {
   product: PropTypes.string,
   amount: PropTypes.string,
+  remove: PropTypes.func
 }
 
 export default ShopListItem;
