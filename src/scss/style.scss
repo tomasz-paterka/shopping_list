@@ -10,9 +10,11 @@ $main_font: 'Roboto', sans-serif;
 @import '../components/Navigation/ToolBar/ToolBar.scss';
 @import '../components/ShopListItem/ShopListItem.scss';
 @import '../components/UI/Button/Button.scss';
-@import '../containers/ShoppingList/ShoppingList.scss';
+/* @import '../containers/ShoppingList/ShoppingList.scss'; */
 @import '../components/UI/Input/Input.scss';
-@import '../containers/AddList/AddList.scss';
+/* @import '../containers/AddList/AddList.scss'; */
+@import '../components//ListItems/ListItems.scss';
+@import '../components/AddListName/AddListName.scss';
 
 body {
   margin: 0;
