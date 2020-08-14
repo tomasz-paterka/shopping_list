@@ -5,6 +5,8 @@ import Aux from '../../hoc/Auxiliary';
 import ListItems from '../../components/ListItems/ListItems';
 import ShopListItem from '../../components/ShopListItem/ShopListItem';
 import AddListName from '../../components/AddListName/AddListName';
+import axios from '../../axios';
+import Button from '../../components/UI/Button/Button';
 
 
 class ShoppingList extends React.Component {
@@ -21,7 +23,9 @@ class ShoppingList extends React.Component {
 
     this.inputProductHandler = this.inputProductHandler.bind(this);
     this.addProduct = this.addProduct.bind(this);
+    this.orderHandler = this.orderHandler.bind(this);
   }
+
 
   inputListNameHandler (event) {
     this.setState({inputValue: event.target.value });
@@ -53,6 +57,24 @@ class ShoppingList extends React.Component {
   removeHandler(id) {
     const filteredProducts = this.state.products.filter(item => item.id !== id)
     this.setState({products: filteredProducts});
+  }
+
+  saveHandler(e) {
+    e.preventDefault();
+    
+    const list = {
+      name: this.state.name,
+      products: this.state.products
+    };
+
+    axios.post('/lists.json', list)
+      .then(response => {
+        console.log(response);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+    console.log(list);
   }
   
   render() {
@@ -88,6 +110,7 @@ class ShoppingList extends React.Component {
       <Aux>
         {addListName}
         {listItems}
+        <Button click={this.saveHandler}>zapisz</Button>
       </Aux>
     );
   }
