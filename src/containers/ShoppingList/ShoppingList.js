@@ -5,9 +5,7 @@ import Aux from '../../hoc/Auxiliary';
 import ListItems from '../../components/ListItems/ListItems';
 import ShopListItem from '../../components/ShopListItem/ShopListItem';
 import AddListName from '../../components/AddListName/AddListName';
-import axios from '../../axios';
-import Button from '../../components/UI/Button/Button';
-
+// import Button from '../../components/UI/Button/Button';
 
 class ShoppingList extends React.Component {
   constructor(props) {
@@ -18,12 +16,28 @@ class ShoppingList extends React.Component {
       products: [],
     };
 
+    this.savedState = this.savedState.bind(this);
+
     this.inputListNameHandler = this.inputListNameHandler.bind(this);
     this.addNameList = this.addNameList.bind(this);
 
     this.inputProductHandler = this.inputProductHandler.bind(this);
     this.addProduct = this.addProduct.bind(this);
-    this.orderHandler = this.orderHandler.bind(this);
+    
+    this.saveListHandler = this.saveListHandler.bind(this);
+    this.deleteListHandler = this.deleteListHandler.bind(this);
+  }
+
+  componentDidMount() {
+    this.savedState('state');
+  }  
+
+  savedState(key) {
+    const stateFromStorage = localStorage.getItem(key);
+    const newState = JSON.parse(stateFromStorage);
+    console.log(newState);
+
+    this.setState(newState);
   }
 
 
@@ -33,16 +47,12 @@ class ShoppingList extends React.Component {
 
   addNameList() {
     const listName = this.state.inputValue
-    this.setState({
-      name: listName
-    });
-  } 
+    this.setState({name: listName});
+  }
 
   inputProductHandler (event) {
     const value = event.target.value;
-    this.setState({
-      [event.target.name]: value
-    });
+    this.setState({[event.target.name]: value});
   } 
 
   addProduct() {
@@ -51,33 +61,40 @@ class ShoppingList extends React.Component {
     this.setState({
       products: [
         ...this.state.products,
-        {product: product, amount: amount, id: uuid()}]});
+        {
+          product: product,
+          amount: amount,
+          id: uuid()
+        }
+      ]
+    });
   }
   
   removeHandler(id) {
-    const filteredProducts = this.state.products.filter(item => item.id !== id)
+    const list = [...this.state.products];
+    const filteredProducts = list.filter(item => item.id !== id);
     this.setState({products: filteredProducts});
   }
 
-  saveHandler(e) {
-    e.preventDefault();
-    
-    const list = {
-      name: this.state.name,
-      products: this.state.products
-    };
+  saveListHandler() {
+    const data = this.state;
+    localStorage.setItem('state', JSON.stringify(data));
+  }
 
-    axios.post('/lists.json', list)
-      .then(response => {
-        console.log(response);
-      })
-      .catch(error => {
-        console.log(error);
-      });
-    console.log(list);
+  deleteListHandler() {
+    localStorage.clear();
+    this.setState({
+      name: '',
+      inputValue: '',
+      productValue: '',
+      amountValue: null,
+      products: [],
+    });
   }
   
   render() {
+    
+
     const addListName = this.state.name === '' ?
       <AddListName 
         change={this.inputListNameHandler}
@@ -99,7 +116,9 @@ class ShoppingList extends React.Component {
         name={this.state.name}
         remove={() => this.removeHandler(this.state.products.id)}
         change={this.inputProductHandler}
-        click={this.addProduct}>
+        click={this.addProduct}
+        save={this.saveListHandler}
+        delete={this.deleteListHandler}>
           {shopListItems}
         </ListItems>
     }
@@ -110,7 +129,6 @@ class ShoppingList extends React.Component {
       <Aux>
         {addListName}
         {listItems}
-        <Button click={this.saveHandler}>zapisz</Button>
       </Aux>
     );
   }
