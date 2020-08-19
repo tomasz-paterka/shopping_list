@@ -8,6 +8,13 @@
   cursor: pointer;
 }
 
+.ShopListItem__products {
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+  border-right: 1px solid $main_color;
+}
+
 .ShopListItem__name, 
 .ShopListItem__amount {
   font-weight: bold;
@@ -17,4 +24,11 @@
 .ShopListItem__delete {
   color: red;
   font-weight: bold;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .ShopListItem__delete--item {
+    margin: 1em 0;
+  }
 }

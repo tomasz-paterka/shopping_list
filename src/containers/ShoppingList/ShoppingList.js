@@ -3,9 +3,8 @@ import uuid from 'react-uuid';
 
 import Aux from '../../hoc/Auxiliary';
 import ListItems from '../../components/ListItems/ListItems';
-import ShopListItem from '../../components/ShopListItem/ShopListItem';
+import ShopListItem from '../ShopListItem/ShopListItem';
 import AddListName from '../../components/AddListName/AddListName';
-// import Button from '../../components/UI/Button/Button';
 
 class ShoppingList extends React.Component {
   constructor(props) {
@@ -33,13 +32,12 @@ class ShoppingList extends React.Component {
   }  
 
   savedState(key) {
-    const stateFromStorage = localStorage.getItem(key);
-    const newState = JSON.parse(stateFromStorage);
-    console.log(newState);
+    let newState = localStorage.getItem(key);
+    newState = JSON.parse(newState);
+    // console.log(newState);
 
     this.setState(newState);
   }
-
 
   inputListNameHandler (event) {
     this.setState({inputValue: event.target.value });
@@ -94,7 +92,6 @@ class ShoppingList extends React.Component {
   
   render() {
     
-
     const addListName = this.state.name === '' ?
       <AddListName 
         change={this.inputListNameHandler}
@@ -106,24 +103,26 @@ class ShoppingList extends React.Component {
       <ShopListItem 
         key={prod.id} 
         product={prod.product} 
-        amount={prod.amount} 
+        amount={prod.amount}
         remove={() => this.removeHandler(prod.id)}/>
     ));
 
     let listItems;
     if (this.state.name !== '') {
-      listItems = <ListItems 
-        name={this.state.name}
-        remove={() => this.removeHandler(this.state.products.id)}
-        change={this.inputProductHandler}
-        click={this.addProduct}
-        save={this.saveListHandler}
-        delete={this.deleteListHandler}>
-          {shopListItems}
+      listItems = 
+        <ListItems 
+          name={this.state.name}
+          remove={() => this.removeHandler(this.state.products.id)}
+          change={this.inputProductHandler}
+          click={this.addProduct}
+          save={this.saveListHandler}
+          delete={this.deleteListHandler}>
+            
+            {shopListItems}
         </ListItems>
     }
     
-    console.log(this.state);
+    // console.log(this.state);
 
     return (
       <Aux>

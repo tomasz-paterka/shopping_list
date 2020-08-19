@@ -8,11 +8,13 @@ $main_font: 'Roboto', sans-serif;
 @import '../components/Navigation/NavigationItems/NavigationItem/NavigationItem.scss';
 @import '../components/Navigation/NavigationItems/NavigationItems.scss';
 @import '../components/Navigation/ToolBar/ToolBar.scss';
-@import '../components/ShopListItem/ShopListItem.scss';
+@import '../containers/ShopListItem/ShopListItem.scss';
 @import '../components/UI/Button/Button.scss';
 @import '../components/UI/Input/Input.scss';
 @import '../components//ListItems/ListItems.scss';
 @import '../components/AddListName/AddListName.scss';
+@import '../components/UI/Modal/Modal.scss';
+@import '../components/UI/Backdrop/Backdrop.scss';
 
 body {
   margin: 0;
