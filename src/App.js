@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import Layout from './containers/Layout/Layout';
 import ShoppingList from './containers/ShoppingList/ShoppingList';
-import Home from './containers/testRouter/Home';
+import Home from './components/Home/Home';
 
 class App extends React.Component {
 

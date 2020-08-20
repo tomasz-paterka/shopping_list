@@ -1,0 +1,15 @@
+.Home {
+  position: relative;
+  width: 50vw;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.Home__list {
+  padding-left: 20px;
+  .Home__list--item {
+    margin: 10px 0;
+  }
+}
