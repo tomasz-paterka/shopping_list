@@ -9,11 +9,13 @@ const ListItems = (props) => {
   return (
     <ul className='ListItems'>
       <p>{props.name}</p>
-      <Input 
+      <Input
+        type='text' 
         label="Dodaj produkt" 
         change={props.change}
         name='productValue' />
-      <Input 
+      <Input
+        type='text' 
         label="Ilość" 
         change={props.change}
         name='amountValue' />

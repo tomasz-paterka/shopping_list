@@ -16,6 +16,8 @@ $main_font: 'Roboto', sans-serif;
 @import '../components/UI/Modal/Modal.scss';
 @import '../components/UI/Backdrop/Backdrop.scss';
 @import '../components/Home/Home.scss';
+@import '../components/Navigation/SideDrawer/SideDrawer.scss';
+@import '../components/Navigation/SideDrawer/DrawerToggle/DrawerToggle.scss';
 
 body {
   margin: 0;

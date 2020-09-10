@@ -13,12 +13,16 @@
   box-sizing: border-box;
 }
 
-/* .ToolBar--background {
-  background-color: #DBE6EC;
-} */
+.Toolbar nav {
+  height: 100%;
+}
+
+.Logo {
+  height: 80%;
+}
 
 @media (max-width: 499px) {
-  .ToolBar {
+  .DesktopOnly {
     display: none;
   }
 }

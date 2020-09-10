@@ -12,7 +12,7 @@ class ShoppingList extends React.Component {
     this.state = {
       name: '',
       inputValue: '',
-      products: [],
+      products: []
     };
 
     this.savedState = this.savedState.bind(this);
@@ -51,11 +51,12 @@ class ShoppingList extends React.Component {
   inputProductHandler (event) {
     const value = event.target.value;
     this.setState({[event.target.name]: value});
-  } 
+  }
 
   addProduct() {
     const product = this.state.productValue;
     const amount = this.state.amountValue;
+
     this.setState({
       products: [
         ...this.state.products,
@@ -86,19 +87,18 @@ class ShoppingList extends React.Component {
       inputValue: '',
       productValue: '',
       amountValue: null,
-      products: [],
+      products: []
     });
   }
   
   render() {
-    
+
     const addListName = this.state.name === '' ?
       <AddListName 
         change={this.inputListNameHandler}
         click={this.addNameList}/>
       : null;
-
-
+ 
     const shopListItems = this.state.products.map(prod => (
       <ShopListItem 
         key={prod.id} 
@@ -106,8 +106,8 @@ class ShoppingList extends React.Component {
         amount={prod.amount}
         remove={() => this.removeHandler(prod.id)}/>
     ));
-
-    let listItems;
+ 
+    let  listItems;
     if (this.state.name !== '') {
       listItems = 
         <ListItems 
@@ -117,12 +117,11 @@ class ShoppingList extends React.Component {
           click={this.addProduct}
           save={this.saveListHandler}
           delete={this.deleteListHandler}>
-            
             {shopListItems}
         </ListItems>
     }
     
-    // console.log(this.state);
+    console.log(this.state);
 
     return (
       <Aux>
