@@ -121,7 +121,7 @@ class ShoppingList extends React.Component {
         </ListItems>
     }
     
-    console.log(this.state);
+    // console.log(this.state);
 
     return (
       <Aux>

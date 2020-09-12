@@ -36,7 +36,6 @@ class Layout extends React.Component {
           open={this.state.showSideDrawer} 
           closed={this.sideDrawerClosedHandler}/>
         <main className='Layout'>
-          <div className='Layout__fade'></div>
           {this.props.children}
         </main>
       </Aux>

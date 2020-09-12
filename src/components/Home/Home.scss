@@ -1,15 +1,37 @@
 .Home {
-  position: relative;
-  width: 50vw;
-  padding: 50px;
+  padding: 1.5rem 1.5rem 0 1.5rem;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  font-size: 10px;
+  h1 {
+    margin-bottom: 0;
+  }
+  p {
+    margin: 0;
+  }
 }
 
 .Home__list {
+  margin: 0.5rem 0 0 0;
   padding-left: 20px;
   .Home__list--item {
     margin: 10px 0;
+  }
+}
+
+@include phone_up {
+  .Home {
+    padding: 2rem 2rem 0 2rem;
+    h1 {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+@include tablet_up {
+  .Home {
+    font-size: 16px;
+    padding: 3rem 3rem 0 3rem;
   }
 }

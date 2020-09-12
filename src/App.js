@@ -17,7 +17,7 @@ class App extends React.Component {
     );
 
     return (
-      <div>
+      <div className='Layout__fade'>
         <Layout>
           {routes}
         </Layout>

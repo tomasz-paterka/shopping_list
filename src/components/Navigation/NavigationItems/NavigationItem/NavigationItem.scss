@@ -6,13 +6,12 @@
   
 }
 
-.NavigationItem a {
+.NavigationItem__link {
   text-decoration: none;
-  width: 100%;
   display: block;
   color: white;
   background-color: $main_color;
-  padding: 10px 25px;
+  padding: 0.6rem 1.5rem;
   border-radius: 0.25rem;
 }
 
@@ -25,7 +24,7 @@
     align-items: center;
   }
   
-  .NavigationItem a:hover {
+  .NavigationItem__link:hover {
     border-bottom: 1.5px solid #C4543D;
   }
 }
