@@ -1,8 +1,5 @@
 .Layout {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  @include flex_column_center;
   margin: auto;
   margin-top: 1rem;
   max-width: 1000px;
@@ -10,6 +7,6 @@
 
 @include tablet_up {
   .Layout {
-    margin-top: 10rem;
+    margin-top: 4rem;
   }
 }

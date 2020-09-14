@@ -1,6 +1,8 @@
 .AddListName {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
+  @include flex_column_center;
+  margin-top: 2rem;
+}
+
+.AddListName__input {
+  @include flex_column_center;
 }

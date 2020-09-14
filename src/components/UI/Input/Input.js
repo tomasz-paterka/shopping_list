@@ -1,22 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Aux from '../../../hoc/Auxiliary';
+// import Aux from '../../../hoc/Auxiliary';
 
 const Input = (props) => (
-  <Aux>
+  <div className={props.className}>
     <label className='Input__label'>{props.label}</label>
     <input
+      className='Input__input'
       type={props.type} 
-      className='Input'
       name={props.name}
       onChange={props.change}/>
-  </Aux>
+  </div>
 
 );
 
 Input.propTypes = {
   type: PropTypes.elementType,
+  className: PropTypes.string,
   label: PropTypes.string,
   name: PropTypes.string,
   change: PropTypes.func

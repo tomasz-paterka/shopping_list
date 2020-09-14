@@ -1,21 +1,60 @@
 .ListItems {
   display: flex;
   flex-direction: column;
-  width: 700px;
-  max-height: 700px;
+  width: 300px;
+  // padding: 0 1rem;
+  max-height: 200px;
   border: 1px solid #000;
-  background-color: #DBE6EC;
-  position: relative;
+  background-color: #edf0f1;
   color: $main_color;
   overflow-y: scroll;
 }
 
 .ListItems__header {
-  height: 70%;
-  z-index: 90;
+  @include flex_column_center;
+  background-color: #edf0f1;
+  width: 300px;
+  color: $main_color;
+}
+
+.ListItems__inputs {
+  @include flex_column_center;
+
+  padding: 0 20px;
+}
+
+.ListItems__input {
+  @include flex_row_center;
+  padding: 0 1rem;
+}
+
+.ListItems__buttons {
+  @include flex_center;
 }
 
 .ListItems__list {
   list-style: none;
   padding: 0;
+  margin: 0;
+}
+
+@include phone_up {
+  .ListItems {
+    width: 300px;
+  }
+}
+
+@include desktop_up {
+  .ListItems {
+    width: 700px;
+  }
+
+  .ListItems__header {
+    @include flex_column_center;
+    width: 700px;
+  }
+
+  .ListItems__inputs {
+    @include flex_row_center;
+  }
 }

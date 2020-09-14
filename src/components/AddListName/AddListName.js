@@ -1,5 +1,4 @@
 import React from 'react';
-// import Aux from '../../hoc/Auxiliary';
 import PropTypes from 'prop-types';
 
 import Button from '../../components/UI/Button/Button';
@@ -9,6 +8,7 @@ const AddListName = (props) => (
   <div className='AddListName'>
     <Input
       type='text'
+      className='AddListName__input'
       label="Nazwa listy zakupów"
       change={props.change}
       name='inputValue' />
