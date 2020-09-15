@@ -66,11 +66,11 @@ class ShopListItem extends React.Component {
         </Modal>
         <div className='ShopListItem__item'>
           <div className='ShopListItem__products' onClick={this.openModalHandler}>
-            <p>Product:
-              <span className='ShopListItem__name'>{this.state.product}</span>
+            <p className='ShopListItem__name'>Produkt:
+              <span className='ShopListItem__element'>{this.state.product}</span>
             </p>
-            <p>Amount:
-              <span className='ShopListItem__amount'>{this.state.amount}</span>
+            <p className='ShopListItem__amount'>Ilość:
+              <span className='ShopListItem__element'>{this.state.amount}</span>
             </p>
           </div>
           <div className='ShopListItem__delete' onClick={this.props.remove}>

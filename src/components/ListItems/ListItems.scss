@@ -1,46 +1,79 @@
-.ListItems {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  // padding: 0 1rem;
-  max-height: 200px;
-  border: 1px solid #000;
-  background-color: #edf0f1;
-  color: $main_color;
-  overflow-y: scroll;
-}
-
 .ListItems__header {
   @include flex_column_center;
   background-color: #edf0f1;
   width: 300px;
   color: $main_color;
+  font-size: 0.6rem;
+  border-radius: 0.25rem;
+  h2 {
+    margin: 0.3rem 0;
+  }
 }
 
 .ListItems__inputs {
   @include flex_column_center;
-
-  padding: 0 20px;
 }
 
 .ListItems__input {
   @include flex_row_center;
-  padding: 0 1rem;
+  width: 250px;
+  justify-content: space-between;
+  padding: 0.2rem 1rem;
+  .Input__input  {
+    margin: 0;
+  }
 }
 
 .ListItems__buttons {
   @include flex_center;
 }
 
+.ListItems {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  max-height: 300px;
+  border: 1px solid #000;
+  background-color: #edf0f1;
+  color: $main_color;
+  overflow-y: scroll;
+  border-radius: 0.25rem;
+}
+
 .ListItems__list {
   list-style: none;
   padding: 0;
   margin: 0;
+  font-size: 0.6rem;
 }
 
 @include phone_up {
   .ListItems {
     width: 300px;
+  }
+}
+
+@include tablet_up {
+  .ListItems__header, .ListItems {
+    width: 500px;
+  }
+
+  .ListItems__header {
+    h2 {
+      margin: 0.5rem 0;
+    }
+  }
+
+  .ListItems__inputs {
+    @include flex_row_center;
+  }
+
+  .ListItems__input {
+    width: 100%;
+  }
+
+  .ListItems {
+    max-height: 500px;
   }
 }
 
@@ -51,10 +84,19 @@
 
   .ListItems__header {
     @include flex_column_center;
+    font-size: 1rem;
     width: 700px;
+    h2 {
+      margin: 0.8rem;
+    }
   }
 
   .ListItems__inputs {
+    @include flex_row_center;
+    padding: 0 20px;
+  }
+
+  .ListItems__input {
     @include flex_row_center;
   }
 }

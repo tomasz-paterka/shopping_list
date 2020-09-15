@@ -1,9 +1,4 @@
-// .Input {
-//   @include flex_row_center;
-// }
-
 .Input__label {
-  // padding: 1rem 0.8rem;
   font-size: 1.5em;
 }
 
@@ -12,5 +7,11 @@
   font-family: inherit;
   &:focus {
     outline-color: $main_color;
+  }
+}
+
+@include tablet_up {
+  .Input__label {
+    padding-right: 0.8rem;
   }
 }
