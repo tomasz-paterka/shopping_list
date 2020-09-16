@@ -8,7 +8,7 @@ const Home = () => (
       <h1>Aplikacja Shopping</h1>
       <h3>Proszta i łatwa w obsłudze aplikacja, ułatwiająca robienie zakupów.</h3>
       <p>
-        Aktualnie ważne jest aby robić szybkie, zorganizowane i przemyślane zakupy. 
+        Ważne jest aby robić szybkie, zorganizowane i przemyślane zakupy. 
       </p>
       <ul className='Home__list'>
         <li className='Home__list--item'>Po kliknięciu na przycisk Lista można dodać listę zakupów, którą można dowolnie modyfikować. </li>

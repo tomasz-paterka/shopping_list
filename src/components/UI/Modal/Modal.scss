@@ -5,11 +5,20 @@
   width: 70%;
   border: 1px solid #ccc;
   box-shadow: 1px 1px 1px black;
-  padding: 16px;
+  padding: 1rem;
   left: 15%;
   top: 30%;
   box-sizing: border-box;
   transition: all 0.3s ease-out;
+  @include flex_column_center;
+}
+
+.Modal__input {
+  @include flex_row_center;
+  width: 250px;
+  justify-content: space-between;
+  padding: 0.6rem 0 0 0.8rem;
+  font-size: 0.6rem;
 }
 
 @media (min-width: 600px) {

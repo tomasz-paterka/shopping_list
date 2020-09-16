@@ -54,12 +54,14 @@ class ShopListItem extends React.Component {
     return (
       <Aux>
         <Modal show={this.state.edited} modalClosed={this.cancelEdit}>
-          <Input 
-            label="Dodaj produkt" 
+          <Input
+            className='Modal__input'  
+            label="produkt" 
             change={this.inputChangeProductHandler}
             name='productValue' />
-          <Input 
-            label="Ilość" 
+          <Input
+            className='Modal__input' 
+            label="ilość" 
             change={this.inputChangeProductHandler}
             name='amountValue' />
           <Button click={this.changeProduct}>Zmień produkt</Button>

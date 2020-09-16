@@ -5,4 +5,8 @@
 
 .AddListName__input {
   @include flex_column_center;
+  font-size: 0.8rem;
+  .Input__label {
+    margin-bottom: 0.8rem;
+  }
 }
