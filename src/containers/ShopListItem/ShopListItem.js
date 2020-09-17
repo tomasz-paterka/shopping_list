@@ -50,7 +50,6 @@ class ShopListItem extends React.Component {
   
   render() {
 
-    // console.log(this.state);
     return (
       <Aux>
         <Modal show={this.state.edited} modalClosed={this.cancelEdit}>

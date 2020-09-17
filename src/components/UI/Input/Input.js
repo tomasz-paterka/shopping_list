@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// import Aux from '../../../hoc/Auxiliary';
-
 const Input = (props) => (
   <div className={props.className}>
     <label className='Input__label'>{props.label}</label>
