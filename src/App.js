@@ -10,9 +10,9 @@ class App extends React.Component {
   render() {
     let routes = (
       <Switch>
+        <Route path='/' exact component={Home} />
         <Route path='/home' component={Home} />
         <Route path='/list' component={ShoppingList} />
-        <Route path='/' exact component={Home} />
       </Switch>
     );
 

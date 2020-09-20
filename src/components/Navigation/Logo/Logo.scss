@@ -1,10 +1,9 @@
 .Logo {
   padding: 0.5rem;
-  height: 80%;
-  cursor: pointer;
+  height: 90%;
   @include flex_column_center;
   img {
-    height: 60%;
+    height: 70%;
     border-radius: 0.25rem;
   }
 }

@@ -26,11 +26,11 @@ AddListName.propTypes = {
   /**
    * input change func 
    */
-  change: PropTypes.func,
+  change: PropTypes.func.isRequired,
   /**
    * click change func 
    */
-  click: PropTypes.func
+  click: PropTypes.func.isRequired
 }
 
 export default AddListName;
