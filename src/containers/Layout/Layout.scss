@@ -1,8 +1,7 @@
 .Layout {
   @include flex_column_center;
   margin: auto;
-  margin-top: 0.5rem;
-  max-width: 1000px;
+  max-width: 992px;
 }
 
 @include tablet_up {

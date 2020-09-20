@@ -4,6 +4,12 @@ import PropTypes from 'prop-types';
 import Button from '../../components/UI/Button/Button';
 import Input from '../../components/UI/Input/Input';
 
+/**
+ * AddListName component
+ * @component
+ * 
+ * Component that add list name
+ */
 const AddListName = (props) => (
   <div className='AddListName'>
     <Input
@@ -17,7 +23,13 @@ const AddListName = (props) => (
 );
 
 AddListName.propTypes = {
+  /**
+   * input change func 
+   */
   change: PropTypes.func,
+  /**
+   * click change func 
+   */
   click: PropTypes.func
 }
 

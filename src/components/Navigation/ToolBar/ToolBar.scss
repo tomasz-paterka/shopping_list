@@ -1,13 +1,13 @@
 .ToolBar {
-  height: 100px;
+  height: 6rem;
   max-width: 80%;
   margin: auto;
   background-color: transparent;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   z-index: 90;
   padding: 0 1rem;
-  margin-top: 10px;
   box-sizing: border-box;
 }
 
@@ -19,5 +19,12 @@
   .ToolBar--desktopOnly {
     display: none;
     padding: 0 10rem;
+  }
+}
+
+@include tablet_up {
+  .ToolBar {
+    height: 6.25rem;
+    margin-top: 0.6rem;
   }
 }

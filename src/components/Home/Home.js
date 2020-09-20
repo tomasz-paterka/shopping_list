@@ -6,7 +6,7 @@ const Home = () => (
   <Aux>
     <div className='Home'>
       <h1>Aplikacja Shopping</h1>
-      <h3>Proszta i łatwa w obsłudze aplikacja, ułatwiająca robienie zakupów.</h3>
+      <h3>Prosta i łatwa w obsłudze aplikacja, ułatwiająca robienie zakupów.</h3>
       <p>
         Ważne jest aby robić szybkie, zorganizowane i przemyślane zakupy. 
       </p>

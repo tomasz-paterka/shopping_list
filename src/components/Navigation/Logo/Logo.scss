@@ -1,9 +1,19 @@
 .Logo {
   padding: 0.5rem;
-  height: 100%;
+  height: 80%;
   cursor: pointer;
+  @include flex_column_center;
   img {
-    height: 80%;
+    height: 60%;
     border-radius: 0.25rem;
+  }
+}
+
+@include tablet_up {
+  .Logo {
+    height: 100%;
+    img {
+      height: 80%;
+    }
   }
 }
