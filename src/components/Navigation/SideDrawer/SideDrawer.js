@@ -6,6 +6,11 @@ import NavigationItems from '../NavigationItems/NavigationItems';
 import BackDrop from '../../UI/Backdrop/Backdrop';
 import Aux from '../../../hoc/Auxiliary';
 
+/**
+ * SideDrawer component,
+ * render mobile navigation.
+ * @component
+ */
 const SideDrawer = (props) => {
   let attachedClasses = ['SideDrawer', 'Close'];
   if (props.open) {
@@ -28,7 +33,13 @@ const SideDrawer = (props) => {
 };
 
 SideDrawer.propTypes = {
+  /**
+   * open checks if SideDrower is open, and shows BackDrop
+   */
   open: PropTypes.bool,
+  /**
+   * closed checks if SideDrower is closed, and hide BackDrop
+   */
   closed: PropTypes.func
 }
 

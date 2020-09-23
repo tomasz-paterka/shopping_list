@@ -5,10 +5,9 @@ import Button from '../../components/UI/Button/Button';
 import Input from '../../components/UI/Input/Input';
 
 /**
- * AddListName component
+ * AddListName component,
+ * render input to add list name
  * @component
- * 
- * Component that add list name
  */
 const AddListName = (props) => (
   <div className='AddListName'>
@@ -28,7 +27,7 @@ AddListName.propTypes = {
    */
   change: PropTypes.func.isRequired,
   /**
-   * click change func 
+   * click reference to inputListNameHandler() method
    */
   click: PropTypes.func.isRequired
 }

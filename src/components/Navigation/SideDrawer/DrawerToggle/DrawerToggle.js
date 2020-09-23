@@ -1,6 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/**
+ * DrawerToggle component,
+ * render mobile navigation hamburger.
+ * @component
+ */
 const DrawerToggle = (props) => (
   <div className='DrawerToggle' onClick={props.clicked}>
     <div></div>
@@ -10,7 +15,10 @@ const DrawerToggle = (props) => (
 );
 
 DrawerToggle.propTypes = {
-  clicked: PropTypes.func
+  /**
+   * clicked func reference to drawerToggleClicked() method
+   */
+  clicked: PropTypes.func.isRequired
 }
 
 export default DrawerToggle;

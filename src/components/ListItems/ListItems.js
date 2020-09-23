@@ -5,6 +5,11 @@ import Button from '../../components/UI/Button/Button';
 import Input from '../../components/UI/Input/Input';
 import Aux from '../../hoc/Auxiliary';
 
+/**
+ * ListItems component,
+ * render list of products
+ * @component
+ */
 const ListItems = (props) => {
 
   return (
@@ -30,8 +35,6 @@ const ListItems = (props) => {
           <Button click={props.save}>Zapisz listę</Button>
           <Button click={props.delete}>Usuń listę</Button>
         </div>
-
-
       </header>
       <div className='ListItems'>
         <ul className='ListItems__list'>
@@ -43,12 +46,30 @@ const ListItems = (props) => {
 };
 
 ListItems.propTypes = {
-  name: PropTypes.string,
-  change: PropTypes.func,
-  click: PropTypes.func,
-  save: PropTypes.func,
-  delete: PropTypes.func,
-  children: PropTypes.array
+  /**
+   * name is a list name
+   */
+  name: PropTypes.string.isRequired,
+  /**
+   * input change func 
+   */
+  change: PropTypes.func.isRequired,
+  /**
+   * click func reference to addProduct() method
+   */
+  click: PropTypes.func.isRequired,
+  /**
+   * save func reference to saveListHandler() method 
+   */
+  save: PropTypes.func.isRequired,
+  /**
+   * delete func reference to deleteListHandler() method 
+   */
+  delete: PropTypes.func.isRequired,
+  /**
+   * children are array of products 
+   */
+  children: PropTypes.array.isRequired
 }
 
 export default ListItems;

@@ -5,6 +5,11 @@ import Logo from '../Logo/Logo';
 import NavigationItems from '../NavigationItems/NavigationItems';
 import DrawerToggle from '../SideDrawer/DrawerToggle/DrawerToggle';
 
+/**
+ * ToolBar component,
+ * render navigation.
+ * @component
+ */
 const ToolBar = (props) => (
   <header className='ToolBar'>
     <DrawerToggle clicked={props.drawerToggleClicked}/>
@@ -16,6 +21,9 @@ const ToolBar = (props) => (
 );
 
 ToolBar.propTypes = {
+  /**
+   * drawerToggleClicked func reference to drawerToggleClicked() method
+   */
   drawerToggleClicked: PropTypes.func,
 }
 

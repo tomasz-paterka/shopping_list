@@ -2,6 +2,11 @@ import React from "react";
 
 import Aux from '../../hoc/Auxiliary';
 
+/**
+ * Home component.
+ * Starting page with instructions
+ * @component
+ */
 const Home = () => (
   <Aux>
     <div className='Home'>
