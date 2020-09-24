@@ -1,6 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/**
+ * Button component,
+ * render backdrop style to Modal and SideDrawer.
+ * @component
+ */
 const Button = (props) => (
   <button
     onClick={props.click} 
@@ -8,8 +13,14 @@ const Button = (props) => (
 );
 
 Button.propTypes = {
+  /**
+   * children - button description
+   */
   children: PropTypes.string,
-  click: PropTypes.func
+  /**
+   * click func reference to method
+   */
+  click: PropTypes.func.isRequired
 }
 
 export default Button;

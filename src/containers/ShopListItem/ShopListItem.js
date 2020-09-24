@@ -7,6 +7,10 @@ import Modal from '../../components/UI/Modal/Modal';
 import Input from '../../components/UI/Input/Input';
 import Button from '../../components/UI/Button/Button';
 
+/**
+ * ShopListItem container, renders product and amount if list item.
+ * @class
+ */
 class ShopListItem extends React.Component {
   constructor(props) {
     super(props)
@@ -22,19 +26,31 @@ class ShopListItem extends React.Component {
     this.changeProduct = this.changeProduct.bind(this);
   }
 
+  /**
+   * Handler for open Modal
+   */
   openModalHandler() {
     this.setState({edited: true});
   }
 
+  /**
+   * Handler for cancel editing Modal
+   */
   cancelEdit() {
     this.setState({edited: false});
   }
 
+  /**
+   * Change handler for product inputs
+   */
   inputChangeProductHandler (event) {
     const value = event.target.value;
     this.setState({[event.target.name]: value});
   } 
 
+  /**
+   * Handler for changing product
+   */
   changeProduct() {
     const product = this.state.productValue;
     const amount = this.state.amountValue;
@@ -79,14 +95,22 @@ class ShopListItem extends React.Component {
           </div>
         </div>
       </Aux>
-
     );
   }
 }
 
 ShopListItem.propTypes = {
+  /**
+   * product is a product item
+   */
   product: PropTypes.string,
+  /**
+   * amount of products
+   */
   amount: PropTypes.string,
+  /**
+   * remove func reference to method
+   */
   remove: PropTypes.func
 }
 

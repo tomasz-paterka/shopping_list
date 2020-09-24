@@ -5,6 +5,10 @@ import Aux from '../../hoc/Auxiliary';
 import ToolBar from '../../components/Navigation/ToolBar/ToolBar';
 import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer';
 
+/**
+ * Layout container, renders all components.
+ * @class
+ */
 class Layout extends React.Component {
   constructor(props) {
     super(props)
@@ -16,12 +20,18 @@ class Layout extends React.Component {
     this.sideDrawerToggleHandler = this.sideDrawerToggleHandler.bind(this);
   }
 
+  /**
+   * Handler for closing SideDrawer
+   */
   sideDrawerClosedHandler() {
     this.setState({
       showSideDrawer: false
     });
   }
 
+  /**
+   * Handler for toggle SideDrawer
+   */
   sideDrawerToggleHandler() {
     this.setState((prevState) => {
       return {showSideDrawer: !prevState.showSideDrawer}
@@ -44,6 +54,9 @@ class Layout extends React.Component {
 }
 
 Layout.propTypes = {
+  /**
+   * children application objects
+   */
   children: PropTypes.object
 }
 

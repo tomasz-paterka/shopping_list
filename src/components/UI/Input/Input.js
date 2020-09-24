@@ -1,6 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/**
+ * Input component,
+ * render input tag with label.
+ * @component
+ */
 const Input = (props) => (
   <div className={props.className}>
     <label className='Input__label'>{props.label}</label>
@@ -14,11 +19,26 @@ const Input = (props) => (
 );
 
 Input.propTypes = {
+  /**
+   * type is a type of input
+   */
   type: PropTypes.elementType,
+  /**
+   * className is a html class
+   */
   className: PropTypes.string,
+  /**
+   * inputs label
+   */
   label: PropTypes.string,
+  /**
+   * inputs name
+   */
   name: PropTypes.string,
-  change: PropTypes.func
+  /**
+   * input change func reference to method
+   */
+  change: PropTypes.func.isRequired
 }
 
 export default Input;
