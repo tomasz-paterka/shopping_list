@@ -6,6 +6,10 @@ import ListItems from '../../components/ListItems/ListItems';
 import ShopListItem from '../ShopListItem/ShopListItem';
 import AddListName from '../../components/AddListName/AddListName';
 
+/**
+ * ShoppingList container, renders shopping list
+ * @class
+ */
 class ShoppingList extends React.Component {
   constructor(props) {
     super(props)
@@ -31,28 +35,43 @@ class ShoppingList extends React.Component {
     this.savedState('state');
   }  
 
+  /**
+   * Method that gets saved state from local storage 
+   * @param {object} key - list object saved to local storage
+   */
   savedState(key) {
     let newState = localStorage.getItem(key);
     newState = JSON.parse(newState);
-    // console.log(newState);
 
     this.setState(newState);
   }
 
-  inputListNameHandler (event) {
+  /**
+   * Input change handler for list name  
+   */
+  inputListNameHandler(event) {
     this.setState({inputValue: event.target.value });
   } 
 
+  /**
+   * Method adding list name to state
+   */
   addNameList() {
     const listName = this.state.inputValue
     this.setState({name: listName});
   }
 
-  inputProductHandler (event) {
+  /**
+   * Input change handler for product 
+   */
+  inputProductHandler(event) {
     const value = event.target.value;
     this.setState({[event.target.name]: value});
   }
 
+  /**
+   * Method adding product and amount of product to state
+   */
   addProduct() {
     const product = this.state.productValue;
     const amount = this.state.amountValue;
@@ -69,17 +88,27 @@ class ShoppingList extends React.Component {
     });
   }
   
+  /**
+   * Handler for removing products from the list
+   * @param {string} id - key id for removing item
+   */
   removeHandler(id) {
     const list = [...this.state.products];
     const filteredProducts = list.filter(item => item.id !== id);
     this.setState({products: filteredProducts});
   }
 
+  /**
+   * Handler for saving list to local storage
+   */
   saveListHandler() {
     const data = this.state;
     localStorage.setItem('state', JSON.stringify(data));
   }
 
+  /**
+   * Handler for deleting saved list from local storage
+   */
   deleteListHandler() {
     localStorage.clear();
     this.setState({
